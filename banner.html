@@ -24,11 +24,9 @@
 
   <script>
     const banner = document.getElementById('banner');
-    const messages = ["Namaste!", "k xa kbr ", "Enjoy your visit!"];
-    let i = 0;
+    const messages = ["Namaste!", "k xa kbr ", "Enjoy your visit!","hello"];
     setInterval(() => {
-      banner.textContent = messages[i % messages.length];
-      i++;
+      banner.textContent = messages[Math.random()* messages.length];
     }, 3000);
   </script>
 </body>
