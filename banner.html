@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #banner {
+      width: 100%;
+      height: 100px;
+      background-color: #333;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      line-height: 100px;
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="banner">Welcome to My Site!</div>
+
+  <script>
+    const banner = document.getElementById('banner');
+    const messages = ["Welcome!", "Check out our updates", "Enjoy your visit!"];
+    let i = 0;
+    setInterval(() => {
+      banner.textContent = messages[i % messages.length];
+      i++;
+    }, 3000);
+  </script>
+</body>
+</html>
